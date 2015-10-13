@@ -8,9 +8,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-/**
- * Created by sean on 10/12/15.
- */
 public class Stats {
 
     private static Connection db = new Connection("root", "root");

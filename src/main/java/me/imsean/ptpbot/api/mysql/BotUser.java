@@ -10,9 +10,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/**
- * Created by sean on 10/11/15.
- */
 public class BotUser {
 
     public static Connection db = new Connection("root", "root");

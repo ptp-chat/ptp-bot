@@ -8,9 +8,6 @@ import xyz.gghost.jskype.message.Message;
 import xyz.gghost.jskype.user.GroupUser;
 import xyz.gghost.jskype.user.User;
 
-/**
- * Created by sean on 10/12/15.
- */
 public class AdminsCommand extends Command {
 
     public AdminsCommand() {

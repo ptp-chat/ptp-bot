@@ -9,9 +9,6 @@ import xyz.gghost.jskype.user.User;
 
 import java.sql.SQLException;
 
-/**
- * Created by sean on 10/11/15.
- */
 public class Testcommand extends Command {
 
     public Testcommand() {

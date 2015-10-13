@@ -6,9 +6,6 @@ import me.imsean.ptpbot.exceptions.NotAdminException;
 import xyz.gghost.jskype.event.EventListener;
 import xyz.gghost.jskype.events.TopicChangedEvent;
 
-/**
- * Created by sean on 10/12/15.
- */
 public class UnpermittedTopicChangeListener implements EventListener {
 
     public void onTopicChange(TopicChangedEvent e) {

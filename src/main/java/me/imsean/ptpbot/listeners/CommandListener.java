@@ -4,9 +4,6 @@ import me.imsean.ptpbot.api.command.CommandHandler;
 import xyz.gghost.jskype.event.EventListener;
 import xyz.gghost.jskype.events.UserChatEvent;
 
-/**
- * Created by sean on 10/11/15.
- */
 public class CommandListener implements EventListener {
 
     CommandHandler ch = new CommandHandler();

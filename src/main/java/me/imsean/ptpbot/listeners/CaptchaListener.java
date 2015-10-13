@@ -5,9 +5,6 @@ import xyz.gghost.jskype.events.UserRecaptchaEvent;
 
 import java.util.Scanner;
 
-/**
- * Created by sean on 10/12/15.
- */
 public class CaptchaListener implements EventListener {
 
     public void onCaptcha(UserRecaptchaEvent e) {

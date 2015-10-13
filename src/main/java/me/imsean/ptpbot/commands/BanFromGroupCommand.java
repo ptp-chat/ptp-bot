@@ -9,9 +9,6 @@ import xyz.gghost.jskype.message.Message;
 import xyz.gghost.jskype.user.GroupUser;
 import xyz.gghost.jskype.user.User;
 
-/**
- * Created by sean on 10/11/15.
- */
 public class BanFromGroupCommand extends Command {
 
 

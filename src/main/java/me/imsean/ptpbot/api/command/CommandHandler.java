@@ -11,9 +11,6 @@ import xyz.gghost.jskype.user.User;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by sean on 10/11/15.
- */
 public class CommandHandler {
 
     public static final String prefix = "#";
