@@ -26,13 +26,17 @@ public class BanFromGroupCommand extends Command {
             group.sendMessage(user.getUsername() + " - Usage: #ban (username)");
         }
         if(args.length > 0) {
-            if(args[0].equalsIgnoreCase(PTPBot.getOwner())) {
-                group.sendMessage(user.getUsername() + " - You cannot ban this user!");
+            if(args[0].equalsIgnoreCase(PTPBot.getOwner()) || args[0].equalsIgnoreCase(PTPBot.getSkype().getUsername())) {
+                group.sendMessage(user.getUsername() + " - r u srs???");
                 return;
             }
             try {
                 for(GroupUser gu : group.getClients()) {
                     if(gu.getUser().getUsername().equals(args[0])) {
+                        if(BotUser.isBotAdmin(PTPBot.getSkype().getUserByUsername(args[0]))) {
+                            group.sendMessage(user.getUsername() + " - r u srs????");
+                            return;
+                        }
                         BotUser.banFromGroup(group, args[0]);
                         if(!PTPBot.getSkype().getUserByUsername(args[0]).isContact()) {
                             PTPBot.getSkype().getUserByUsername(args[0]).sendContactRequest(PTPBot.getSkype());

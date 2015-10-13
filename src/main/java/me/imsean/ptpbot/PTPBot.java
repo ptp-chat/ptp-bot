@@ -38,6 +38,8 @@ public class PTPBot {
         skype.getEventManager().registerListener(new ChatListener());
         skype.getEventManager().registerListener(new BannedUserJoinListener());
         skype.getEventManager().registerListener(new StatsMessageCountListener());
+        skype.getEventManager().registerListener(new UnpermittedTopicChangeListener());
+        skype.getEventManager().registerListener(new UnpermittedTopicPictureChangeListener());
 
         while(isRunning) {}
         skype.stop();
