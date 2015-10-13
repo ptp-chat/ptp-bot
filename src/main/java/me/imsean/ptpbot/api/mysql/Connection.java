@@ -2,9 +2,6 @@ package me.imsean.ptpbot.api.mysql;
 
 import java.sql.*;
 
-/**
- * Created by sean on 10/11/15.
- */
 public class Connection {
 
     static final String DRIVER = "com.mysql.jdbc.Driver";

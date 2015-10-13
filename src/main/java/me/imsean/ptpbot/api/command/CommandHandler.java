@@ -1,5 +1,7 @@
 package me.imsean.ptpbot.api.command;
 
+import me.imsean.ptpbot.api.mysql.StatsManager;
+import me.imsean.ptpbot.api.mysql.UserManager;
 import me.imsean.ptpbot.commands.BanFromGroupCommand;
 import me.imsean.ptpbot.commands.JoinCommand;
 import me.imsean.ptpbot.commands.StatsCommand;
@@ -11,24 +13,25 @@ import xyz.gghost.jskype.user.User;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by sean on 10/11/15.
- */
 public class CommandHandler {
 
     public static final String prefix = "#";
 
+    private final UserManager userManager;
+    private final StatsManager statsManager;
     private List<Command> commands;
 
-    public CommandHandler() {
+    public CommandHandler(UserManager userManager, StatsManager statsManager) {
+        this.userManager = userManager;
+        this.statsManager = statsManager;
         this.commands = new ArrayList<Command>();
 
         addCommands(
-                new BanFromGroupCommand(),
-                new UnbanFromGroupCommand(),
+                new BanFromGroupCommand(this.userManager),
+                new UnbanFromGroupCommand(this.userManager),
                 new JoinCommand(),
-                new StatsCommand()
-                );
+                new StatsCommand(this.userManager, this.statsManager)
+        );
     }
 
     public List<Command> getCommands() {
