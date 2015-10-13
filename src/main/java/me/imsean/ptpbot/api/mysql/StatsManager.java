@@ -1,5 +1,6 @@
 package me.imsean.ptpbot.api.mysql;
 
+import me.imsean.ptpbot.PTPBot;
 import me.imsean.ptpbot.api.command.Command;
 import me.imsean.ptpbot.api.command.CommandHandler;
 
@@ -8,15 +9,21 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-public class Stats {
+public class StatsManager {
 
-    private static Connection db = new Connection("root", "root");
+    private final UserManager userManager;
+    private final Connection connection;
 
-    public static Integer getMessageCount() {
+    public StatsManager() {
+        this.userManager = PTPBot.getUserManager();
+        this.connection = PTPBot.getConnection();
+    }
+
+    public int getMessageCount() {
         int messages = 0;
         try {
-            PreparedStatement stmt = db.query("SELECT `messages` FROM `stats`").getStatement();
-            ResultSet result = db.execute();
+            PreparedStatement stmt = this.connection.query("SELECT `messages` FROM `stats`").getStatement();
+            ResultSet result = this.connection.execute();
             while(result.next()) {
                 messages = result.getInt("messages");
             }
@@ -26,15 +33,15 @@ public class Stats {
         return messages;
     }
 
-    public static Integer getCommandCount() {
-        CommandHandler ch = new CommandHandler();
+    public int getCommandCount() {
+        CommandHandler ch = new CommandHandler(this.userManager, this);
         List<Command> commands = ch.getCommands();
         return commands.size();
     }
 
-    public static void addMessages() {
+    public void addMessages() {
         try {
-            PreparedStatement stmt = db.query("INSERT INTO `stats` (`messages`) VALUES(?)").getStatement();
+            PreparedStatement stmt = this.connection.query("INSERT INTO `stats` (`messages`) VALUES(?)").getStatement();
             stmt.setInt(1, (int)Math.random() * 1000);
             stmt.executeUpdate();
         } catch (SQLException e) {
