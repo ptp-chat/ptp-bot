@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: xyz.gghost:jskype:Recoded2">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/xyz/gghost/jskype/Recoded2/jskype-Recoded2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/xyz/gghost/jskype/Recoded2/jskype-Recoded2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/xyz/gghost/jskype/Recoded2/jskype-Recoded2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

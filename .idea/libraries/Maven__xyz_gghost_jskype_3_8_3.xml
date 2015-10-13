@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: xyz.gghost:jskype:3.8.3">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/xyz/gghost/jskype/3.8.3/jskype-3.8.3.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/xyz/gghost/jskype/3.8.3/jskype-3.8.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/xyz/gghost/jskype/3.8.3/jskype-3.8.3-sources.jar!/" />
+      <root url="file://$USER_HOME$/Downloads/mysql-connector-java-5.1.36/src" />
+    </SOURCES>
+  </library>
+</component>
