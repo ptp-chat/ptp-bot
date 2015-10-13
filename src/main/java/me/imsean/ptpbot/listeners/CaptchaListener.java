@@ -17,6 +17,8 @@ public class CaptchaListener implements EventListener {
 
         System.out.println("Enter captcha:");
         e.setAnswer(in.nextLine());
+        
+        in.close();
     }
 
 }
